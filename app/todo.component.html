@@ -1,0 +1,10 @@
+<p>Todo Application</p>
+
+<ul>
+  <li *ngFor="let t of todos | filterTodo" >
+    <input type="checkbox" [(ngModel)]="t.done">
+     <span [done]="t.done">{{t.title}} - {{t.date | date: "dd/MM/yyyy "}}</span> </li>
+</ul>
+
+<input type="text" [(ngModel)] = "todo.title">
+<button (click)="addTodo(todo)">Add</button>
